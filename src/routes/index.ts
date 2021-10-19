@@ -3,13 +3,15 @@ import Home from '../views/Home.vue'
 import Editor from '../views/Editor.vue'
 import TemplateDetail from '../views/TemplateDetail.vue'
 import Index from '../views/Index.vue'
+import table from '../views/table.vue'
+import jtable from '../views/Jtable.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: '/',
-      name: 'index',
+      name: 'bettertable',
       component: Index,
       children: [
         { path: '', name: 'home', component: Home },
@@ -20,6 +22,16 @@ const router = createRouter({
       path: '/editor',
       name: 'editor',
       component: Editor
+    },
+    {
+      path: '/table',
+      name: 'table',
+      component: table
+    },
+    {
+      path: '/bettertable',
+      name: 'bettertable',
+      component: jtable
     }
   ]
 })
